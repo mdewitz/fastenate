@@ -1,5 +1,227 @@
+// @import url(http:/fonts.googleapis.com/css?family=Oswald:400,300);
+// @import url(http://fonts.googleapis.com/css?family=Lato:300,400);
+$small-only: "only screen and (max-width: 640px)";
+$medium-down: "only screen and (max-width: 960px)";
+$medium-only: "only screen and (min-width: 641px) and (max-width: 960px)";
+$medium-up: "only screen and (min-width: 641px)";
+$large-up: "only screen and (min-width: 961px)";
+
+$dark-grey: rgb(58,  58,  60);
+$light-grey: rgb(129, 130, 133);
+
 body {
+  margin: 0;
+  padding: 0;
+}
+header{
+  position: relative;
   h1 {
+    text-transform: uppercase;
     background-color: #fff;
+    font-size: 2rem;
+    font-weight: 100;
+    margin-top: 20px;
+    display: inline;
+    margin: 0;
+    padding: 0 5px;
+    border: 1.5px solid rgb(176, 71, 31);
+      // 248, 211, 184); 
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: rgb(176, 71, 31);
   }
 }
+
+#logo{
+  background-image: url('/assets/logo.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 130px;
+  height: 60px;
+  display: inline-block;
+  position: relative;
+  margin-left: 40%;
+  margin-top: 10px;
+  @media#{$small-only}{
+    margin-left: 0;
+    float: left;
+  }
+}
+
+#right_line{
+  background-image: url('/assets/header_bg.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  // background-position: center;
+  height: 12px;
+  width: 800px;
+  display: inline-block;
+  // margin-left: 26%;
+  // top: -30px;
+  position: absolute;
+  top: 30px;
+  left: 15%;
+  @media#{$small-only}{
+    display: none;
+  }
+}
+// .top_area{
+//   margin: 0;
+//   width: 400px;
+//   left: 30%;
+// }
+
+.nav-bar{
+  clear: both;
+  background-color: $dark-grey;
+  margin-bottom: 0;
+  // position: relative;
+  ul{
+    margin: 0;
+    height: 50px;
+    // top: -15px;
+  }
+  li{
+    text-transform: uppercase;
+    list-style-type: none;
+    font-family: 'Oswald', sans-serif;
+    color: grey;
+    display: inline-block;
+    text-align: center;
+    height: 50px;
+    font-size: 1.1rem;
+    font-weight: 300;
+    @media#{$small-only}{
+      padding: 0 3%;
+      li.mid_nav{
+        border-left: 1px solid $light-grey; 
+        border-right: 1px solid $light-grey;
+      }
+    }
+  }
+ li:hover{
+    color: rgb(232, 95, 28);
+  }
+  span{
+    font-size: 3rem;
+    @media#{$small-only}{
+      display: none;
+      // line-height: 10%;
+      // visibility: hidden;
+    }
+    // margin-top:-15px;
+  }
+}
+
+.all{
+  background-image: url('/assets/bg.jpg');
+  clear: both;
+}
+
+.content{
+  background-color: white;
+  height:400px;
+  width: 350px;
+  font-family: 'Lato', sans-serif;
+  display: inline-block;
+  margin: 15px;
+  :hover{
+    border: 2px solid rbg(232, 95, 28);
+  }
+  // @media#{$small-only}{
+  //   width: 40%;
+  // }
+
+  h2{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+    font-size: 1.4rem;
+    line-height: 110%;
+    margin: 0 5%;
+  }
+  .caption{
+    color: $light-grey;
+  }
+  p{
+    font-size: .9rem;
+    margin: 5%;
+  }
+  @media#{$small-only}{
+    margin: 0 15px 15px 0;
+    width: 95%;
+  }
+}
+
+.info{
+  padding: 25px 0 60px;
+  margin-left: 10%;
+  @media#{$small-only}{
+    margin-left: 5%;
+  }
+}
+
+div.content#1, div.content#2{
+  margin: 20px 10%;
+}
+
+.img1{
+  background-image: url('/assets/wizard_pup.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 320px;
+  height: 180px;
+  padding: 5px;
+  margin: 10px;
+  // padding: 0;
+  // margin: 0;
+  z-index: 999;
+  @media#{$small-only}{
+    width: 90%;
+  }
+}
+
+@media#{$large-up}{
+  footer{
+    background-color: $dark-grey;
+    width: 100%;
+    height: 60px;
+    border-top: 1px solid rgb(58, 58, 60);
+    #fb{
+      background-image: url('/assets/facebook_grey.svg');
+      background-size: cover;
+      width: 30px;
+      height: 30px;
+      background-position: center;
+      margin-left: 40%;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    // display: inline;
+    // :hover{
+    // background-image: url('/assets/facebook_orange.svg');
+    // }
+
+    #instagram{
+      // @media#{$large-up}{
+      background-image: url('/assets/instagram_grey.svg');
+      background-size: cover;
+      background-position: center;
+      width: 30px;
+      height: 30px;
+      margin-top: 10px;
+      margin-left: 6px;
+      display: inline-block;
+        // margin-right: 40%;
+        // float: left;
+      // }
+    }
+  }
+}
+
+  // display: inline;
+  // float: left;
+  // :hover{
+  // background-image: url('/assets/facebook_orange.svg');
+  // }
