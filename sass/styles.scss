@@ -8,6 +8,7 @@ $large-up: "only screen and (min-width: 961px)";
 
 $dark-grey: rgb(58,  58,  60);
 $light-grey: rgb(129, 130, 133);
+$orange_hover: rbg(232, 95, 28);
 
 body {
   margin: 0;
@@ -40,48 +41,47 @@ header{
   background-repeat: no-repeat;
   width: 130px;
   height: 60px;
-  display: inline-block;
+  display: block;
   position: relative;
-  margin-left: 40%;
-  margin-top: 10px;
+  margin: auto;
   @media#{$small-only}{
     margin-left: 0;
     float: left;
   }
 }
 
-#right_line{
+#logo_line{
   background-image: url('/assets/header_bg.svg');
   background-size: contain;
   background-repeat: no-repeat;
-  // background-position: center;
+  background-position: center;
   height: 12px;
-  width: 800px;
-  display: inline-block;
-  // margin-left: 26%;
-  // top: -30px;
+  width: 100%;
+  display: block;
+  margin: auto;
   position: absolute;
   top: 30px;
-  left: 15%;
   @media#{$small-only}{
     display: none;
   }
 }
-// .top_area{
-//   margin: 0;
-//   width: 400px;
-//   left: 30%;
-// }
 
 .nav-bar{
   clear: both;
   background-color: $dark-grey;
   margin-bottom: 0;
-  // position: relative;
   ul{
-    margin: 0;
+    margin: auto;
+    text-align: center;
     height: 50px;
-    // top: -15px;
+    word-spacing: 5px;
+    @media#{$small-only}{
+      word-spacing: none;
+      vertical-align: center;
+    } 
+    // @media#{$small-only}{
+    //   height: 0;
+    // }
   }
   li{
     text-transform: uppercase;
@@ -90,28 +90,34 @@ header{
     color: grey;
     display: inline-block;
     text-align: center;
-    height: 50px;
+    height: 42px;
     font-size: 1.1rem;
     font-weight: 300;
+    margin-top: 10px;
+    // @media#{$small-only}{
+    //   // height: 0;
+    //   // padding-left:3%;
+    //   // padding-top: 8px;
+    // }
     @media#{$small-only}{
-      padding: 0 3%;
-      li.mid_nav{
-        border-left: 1px solid $light-grey; 
-        border-right: 1px solid $light-grey;
-      }
+      margin-top: 0; 
     }
   }
- li:hover{
+  li:hover{
     color: rgb(232, 95, 28);
   }
+  .nav_board{
+    @media#{$small-only}{
+      height: 50px;
+      border-right: 1px solid $light-grey;
+      border-left: 1px solid $light-grey;
+      padding: 0 20px;
+    }
+  }
   span{
-    font-size: 3rem;
     @media#{$small-only}{
       display: none;
-      // line-height: 10%;
-      // visibility: hidden;
     }
-    // margin-top:-15px;
   }
 }
 
@@ -127,12 +133,11 @@ header{
   font-family: 'Lato', sans-serif;
   display: inline-block;
   margin: 15px;
-  :hover{
-    border: 2px solid rbg(232, 95, 28);
+  vertical-align: top;
+  @media#{$small-only}{
+    min-height: 400px;
+    height: auto;
   }
-  // @media#{$small-only}{
-  //   width: 40%;
-  // }
 
   h2{
     font-family: 'Oswald', sans-serif;
@@ -140,6 +145,9 @@ header{
     font-size: 1.4rem;
     line-height: 110%;
     margin: 0 5%;
+    :hover{
+      color: rgb(178, 71, 31);
+    }
   }
   .caption{
     color: $light-grey;
@@ -147,6 +155,9 @@ header{
   p{
     font-size: .9rem;
     margin: 5%;
+    span{
+      font-size: 1.3rem;
+    }
   }
   @media#{$small-only}{
     margin: 0 15px 15px 0;
@@ -154,74 +165,78 @@ header{
   }
 }
 
+.content:hover{
+  outline: 6px solid red;
+}
+
 .info{
+  margin: auto;
+  max-width: 765px;
   padding: 25px 0 60px;
-  margin-left: 10%;
   @media#{$small-only}{
     margin-left: 5%;
   }
-}
-
-div.content#1, div.content#2{
-  margin: 20px 10%;
 }
 
 .img1{
   background-image: url('/assets/wizard_pup.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  width: 320px;
+  max-width: 800px;
+  width: auto;
   height: 180px;
-  padding: 5px;
-  margin: 10px;
+  margin: 20px;
   // padding: 0;
   // margin: 0;
-  z-index: 999;
+  // z-index: 999;
+    // width: 88%;
   @media#{$small-only}{
-    width: 90%;
+    max-width: 400px;
+    width: auto;
+  padding: 5px;
   }
 }
+// #fb:hover {
+//   background-image: url('/assets/facebook_orange.svg');
+//   z-index: 999;
+// }
 
-@media#{$large-up}{
-  footer{
+footer{
+  @media#{$large-up}{
     background-color: $dark-grey;
     width: 100%;
     height: 60px;
     border-top: 1px solid rgb(58, 58, 60);
-    #fb{
-      background-image: url('/assets/facebook_grey.svg');
-      background-size: cover;
-      width: 30px;
-      height: 30px;
-      background-position: center;
-      margin-left: 40%;
-      display: inline-block;
-      margin-top: 10px;
-    }
+    margin: auto;
+    text-align: center;
+  }
+  #fb{
+    background-image: url('/assets/facebook_grey.svg');
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    // margin-left: 43%;
+    display: inline-block;
+    margin-top: 10px;
+  }
     // display: inline;
     // :hover{
     // background-image: url('/assets/facebook_orange.svg');
     // }
 
-    #instagram{
-      // @media#{$large-up}{
-      background-image: url('/assets/instagram_grey.svg');
-      background-size: cover;
-      background-position: center;
-      width: 30px;
-      height: 30px;
-      margin-top: 10px;
-      margin-left: 6px;
-      display: inline-block;
-        // margin-right: 40%;
-        // float: left;
-      // }
+  #instagram{
+    // @media#{$large-up}{
+    background-image: url('/assets/instagram_grey.svg');
+    background-size: cover;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 6px;
+    display: inline-block;
+    :hover{
+      background-image: url('/assets/instagram_orange.svg');
     }
   }
 }
-
-  // display: inline;
-  // float: left;
-  // :hover{
-  // background-image: url('/assets/facebook_orange.svg');
-  // }
