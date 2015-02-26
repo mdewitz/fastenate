@@ -75,9 +75,13 @@ header{
     text-align: center;
     height: 50px;
     word-spacing: 5px;
+    // position: relative;
     @media#{$small-only}{
       word-spacing: none;
-      vertical-align: center;
+      vertical-align: middle;
+      // top: 30px;
+      // horizontal-align: baseline;
+      // position:absolute;
     } 
     // @media#{$small-only}{
     //   height: 0;
@@ -94,6 +98,7 @@ header{
     font-size: 1.1rem;
     font-weight: 300;
     margin-top: 10px;
+
     // @media#{$small-only}{
     //   // height: 0;
     //   // padding-left:3%;
@@ -101,6 +106,8 @@ header{
     // }
     @media#{$small-only}{
       margin-top: 0; 
+      // vertical-align: middle;
+      // padding: 10px 15px;
     }
   }
   li:hover{
@@ -128,7 +135,9 @@ header{
 
 .content{
   background-color: white;
-  height:400px;
+  height:500px;
+  // overflow: hidden;
+  // height: auto;
   width: 350px;
   font-family: 'Lato', sans-serif;
   display: inline-block;
@@ -164,9 +173,8 @@ header{
     width: 95%;
   }
 }
-
-.content:hover{
-  outline: 6px solid red;
+.content>h2:hover{
+  color: rgb(178, 71,  31);
 }
 
 .info{
@@ -186,20 +194,12 @@ header{
   width: auto;
   height: 180px;
   margin: 20px;
-  // padding: 0;
-  // margin: 0;
-  // z-index: 999;
-    // width: 88%;
   @media#{$small-only}{
     max-width: 400px;
     width: auto;
-  padding: 5px;
+    padding: 5px;
   }
 }
-// #fb:hover {
-//   background-image: url('/assets/facebook_orange.svg');
-//   z-index: 999;
-// }
 
 footer{
   @media#{$large-up}{
@@ -209,34 +209,27 @@ footer{
     border-top: 1px solid rgb(58, 58, 60);
     margin: auto;
     text-align: center;
-  }
-  #fb{
-    background-image: url('/assets/facebook_grey.svg');
-    background-size: cover;
-    width: 30px;
-    height: 30px;
-    background-position: center;
-    // margin-left: 43%;
-    display: inline-block;
-    margin-top: 10px;
-  }
-    // display: inline;
-    // :hover{
-    // background-image: url('/assets/facebook_orange.svg');
-    // }
-
-  #instagram{
-    // @media#{$large-up}{
-    background-image: url('/assets/instagram_grey.svg');
-    background-size: cover;
-    background-position: center;
-    width: 30px;
-    height: 30px;
-    margin-top: 10px;
-    margin-left: 6px;
-    display: inline-block;
-    :hover{
-      background-image: url('/assets/instagram_orange.svg');
+    #fb{
+      background-image: url('/assets/facebook_grey.svg');
+      background-size: cover;
+      width: 30px;
+      height: 30px;
+      background-position: center;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    #instagram{
+      background-image: url('/assets/instagram_grey.svg');
+      background-size: cover;
+      background-position: center;
+      width: 30px;
+      height: 30px;
+      margin-top: 10px;
+      margin-left: 6px;
+      display: inline-block;
+      :hover{
+        background-image: url('/assets/instagram_orange.svg');
+      }
     }
   }
 }

@@ -1,43 +1,33 @@
-// $(document).ready(function() {   
-// });
-//     $("#fb").hover(function(){
-//         $("#fb").css("background-image", "url('/assets/facebook_orange.svg')");
-//     }, function(){
-//         $("#fb").css("background-image", "url('/assets/facebook_grey.svg')");
-//     });
+
+$("#fb").hover(function(){
+    $("#fb").css("background-image", "url('assets/facebook_orange.svg')");
+}, function(){
+    $("#fb").css("background-image", "url('/assets/facebook_grey.svg')");
+});
+
+$("#instagram").hover(function(){
+    $("#instagram").css("background-image", "url('assets/instagram_orange.svg')");
+}, function(){
+    $("#instagram").css("background-image", "url('/assets/instagram_grey.svg')");
+});
+
+$(".content").hover(function(){
+    $(this).css("outline", "6px solid orange");
+    $("this>h2").css("color", "rgb(178, 71, 31)");
+}, function(){
+    $(this).css("outline", "none");
+    $("h2").css("color", "black");
+});
 // 
 $(document).ready(function() {  
   $(".nav_first").click( function() {
     getData("/api/random.json");
-    // $.getJSON( "/api/random.json", function(data) {
-    //   var article_data = data.data.children;
-    //   $.each(article_data, function(index, value){
-    //     var new_box = renderBox( article_data );
-    //     $(".content").append(new_box);
-    //   });
-    // });
   });
   $(".nav_board").click( function() {
     getData("/api/my_boards.json");
-    // $.getJSON( "/api/my_boards.json", function(data) {
-      // var article_data = data.data.children;
-      // $.each(article_data, function(index, value){
-        // var new_box = renderBox( article_data );
-        // console.log(new_box);
-        // $(".content").append(new_box);
-    //   });
-    // });
   });
   $(".nav_get").click( function() {
     getData("/api/get_the_app.json");
-    // $.getJSON( "/api/my_boards.json", function(data) {
-    //   var article_data = data.data.children;
-    //   $.each(article_data, function(index, value){
-        // var new/_box = renderBox( article_data );
-        // console.log(new_box);
-        // $(".content").append(new_box);
-    //   });
-    // });
   });
 });
 
@@ -77,24 +67,6 @@ function renderBox( article_data ){
 
   content.append( tagline ); 
 
-  // var author = $("<p>",
-  // {
-  //   "class" : "author",
-  //   html : article_data.author
-  // });
-
-  // var age = $("<p>",
-  // {
-  //   "class": "time",
-  //   html : moment.unix(article_data.created).fromNow()
-  // });
-
-  // var views = $("<p>",
-  // {
-  //   "class" : "views",
-  //   html : article_data.views
-  // });
-
   var caption = $("<p>",
   {
     "class" : "caption",
@@ -111,17 +83,5 @@ function renderBox( article_data ){
 
   content.append( description );
 
-  // $(".content").append(content);
   return content;
 }
-
-
-// alert("ready");
-      
- //  $(".caption").html("//sdfsdfsd");
- // });
-
-// $(document).ready( function() {
-// });
-
-//source: https://www.youtube.com/watch?v=pe6keTE9LbE
